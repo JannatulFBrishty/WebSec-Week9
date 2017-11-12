@@ -6,6 +6,34 @@ In this project, we had to create a honeypot server, which according to [Tech Ta
 ### Summary
 Dionaea is a honeypot whose intention is to trap malwares that are exploiting vulnerabilities exposed by services offered to the network with the ultimate goal of gaining a copy of the attacking malware.
 
+![](/assets/dionaea_honeypot.gif?raw=true)
+
+At the moment of the writing of this document, the MHN server has recorded **2023** attacks for the day to the `dionaea` honeypot. The following tables show the breakdowns based on the origin of the attack and port attacked.
+
+Table 1: Rank of Attacks based on the Origin IP
+| Rank |    IP Address   | Origin         | # of Attacks |
+|:----:|:---------------:|:--------------:|:------------:|
+| 1    |72.226.28.47     | USA            | 516          |
+| 2    |107.155.185.36   | USA            | 93           |
+| 3    |158.69.241.18    | Canada         | 59           |
+| 4    |195.154.181.191  | France         | 55           |
+| 5    |51.15.190.16     | United Kingdom | 40           |
+
+
+Table 2: Rank of Attacks based on the Attacked Port 
+| Rank | Port # | # of Attacks |
+|:----:|:------:|:------------:|
+|   1  |  5060  |      337     |
+|   2  |   23   |      287     |
+|   3  |   445  |      115     |
+|   4  |   443  |      102     |
+|   5  |  1433  |      57      |
+
+
+Unfortunately, the MHN Admin Server was not able to discern _**any**_ attack signature. 
+
+**JSON Export** of this honeypot can be found [over here](/assets/dionaea.json) at the `assets` directory of this repository.
+
 ### Issues
 It was a confusing and exasperating experience to set up Google Cloud Platform (GCP) project and VMs for this project.
 
